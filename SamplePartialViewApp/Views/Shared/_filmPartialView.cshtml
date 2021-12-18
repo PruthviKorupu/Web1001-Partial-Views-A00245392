@@ -1,0 +1,35 @@
+﻿@model IEnumerable<SamplePartialViewApp.Models.Film>
+
+<p>
+    <a asp-action="Index">View Films</a>
+</p>
+
+@foreach (var item in Model)
+{
+    <table>
+        <tr>
+            <td><h2>@Html.DisplayFor(modelItem => item.FilmName)</h2></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>
+                <p>@Html.DisplayNameFor(modelItem => item.Duration) :</p>
+            </td>
+            <td><p>@Html.DisplayFor(modelItem => item.Duration)</p></td>
+        </tr>
+        <tr>
+            <td>
+                <p>@Html.DisplayNameFor(modelItem => item.Description) : </p>
+                
+            </td>
+            <td>
+                <p>@Html.DisplayFor(modelItem => item.Description)</p>
+            </td>
+        </tr>
+    </table>
+
+    
+    
+
+}
+
